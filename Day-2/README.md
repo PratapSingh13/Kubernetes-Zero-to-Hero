@@ -1,8 +1,8 @@
-# Understanding docker pull `docker.io/library/ubuntu:latest`
+# Understanding docker pull `docker.io/library/nginx:latest`
 
 ![Docker Pull](../images/dockerPull.png "Docker Pull Command")
 
-The command **`docker pull docker.io/library/ubuntu:latest`** fetches the Ubuntu image (specifically the **`:latest`** tag) from the Docker Hub default registry (**`docker.io`**). By default, if you do not specify a registry or fully qualify the image name, Docker assumes it is hosted on Docker Hub.
+The command **`docker pull docker.io/library/nginx:latest`** fetches the Nginx image (specifically the **`:latest`** tag) from the Docker Hub default registry (**`docker.io`**). By default, if you do not specify a registry or fully qualify the image name, Docker assumes it is hosted on Docker Hub.
 
 ### Pulling Images from Other Registries
 
@@ -13,8 +13,8 @@ docker pull <repository-uri>:<tag>
 docker pull 1234567890.dkr.ecr.us-east-1.amazonaws.com/my-app:v1.0
 ```
 
-- **<repository-uri>:** The URI for your private repository hosted in ECR.
-- **<tag>:** The version or tag of your image (e.g., v1.0).
+- **`<repository-uri>`**: The URI for your private repository hosted in ECR.
+- **`<tag>`**: The version or tag of your image (e.g., v1.0).
 
 **AWS ECR URIs** follow the format:
 
@@ -29,9 +29,9 @@ docker pull gcr.io/<project-id>/<image-name>:<tag>
 docker pull gcr.io/my-gcp-project/my-app:v1.0
 ```
 
-- <project-id>: The Google Cloud project where your container registry resides.
-- <image-name>: The name of your image.
-- <tag>: The version or tag of your image.
+- **`<project-id>`**: The Google Cloud project where your container registry resides.
+- **`<image-name>`**: The name of your image.
+- **`<tag>`**: The version or tag of your image.
 
 GCR URIs follow the format:
 
@@ -68,7 +68,7 @@ To remove an image locally:
 
 ```
 docker rmi <image-name>:<tag>
-docker rmi ubuntu:latest
+docker rmi nginx:latest
 ```
 To force remove an image (use with caution):
 
